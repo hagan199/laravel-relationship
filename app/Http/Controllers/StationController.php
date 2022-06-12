@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 use App\Models\Station;
 use Illuminate\Http\Request;
 
-class StationApiController extends Controller
+class StationController extends Controller
 {
     public function index()
     {
-        return Station::all();
+        return Station::with('users','company')->get();
     }
 
 }
+

@@ -13,25 +13,13 @@ class Station extends Model
         'station_name', 'user_id','company_id','location'
     ];
 
-    /**
- * Get the user that belong
- */
-    public function getCompanyName()
+    public function company()
     {
-        return $this->hasone(Company::class);
+        return $this->belongsTo(Company::class);
     }
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(User::class);
-
+        return $this->hasMany(User::class);
     }
-
-    public function country()
-    {
-        return $this->belongsTo(Country::class);
-
-    }
-
-
 }

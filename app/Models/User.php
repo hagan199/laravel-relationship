@@ -16,13 +16,17 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'company_id'
-    ];
+    // protected $fillable = [
+    //    'name',
+    //   'email',
+    //    'password',
+    //     'station_id'
+    // ];
 
+
+    protected $guarded = [
+
+    ];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -30,7 +34,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        'remember_token'
     ];
 
     /**
@@ -39,11 +43,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'email_verified_at' => 'datetime'
     ];
 
-    public function company()
+    public function station()
     {
-        return $this->belongTo(Company::class);
+        return $this->belongTo(Station::class);
     }
 }

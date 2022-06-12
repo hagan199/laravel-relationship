@@ -13,5 +13,9 @@ class Company extends Model
         'company_name', 'location','country','phone'
     ];
 
-    
+    public function stations()
+    {
+        return $this->hasMany(Station::class);
+    }
+
 }
