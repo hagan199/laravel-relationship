@@ -16,7 +16,11 @@ class CompanyController extends Controller
         return $company->stations()->where('location','Accra')->get();
     }
 
-
+    public function numberofcompanies(Request $request, Company $company){
+        $count = Company::count();
+        return $count;
+    }
+    
     public function store(Request $request)
     {
         $validated = $request->validate([
