@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return Product::all();
+        return product::with('station')->get();
     }
 
     public function store(Request $request)
