@@ -15,11 +15,11 @@ class Product extends Model
 
     public function company()
     {
-        return $this->belongsTo('Company::class');
+        return $this->belongsTo(Company::class);
     }
 
     public function station()
     {
-        return $this->belongsTo('Station::class');
+        return $this->belongsTo(Station::class);
     }
 }

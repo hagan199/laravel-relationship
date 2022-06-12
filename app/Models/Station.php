@@ -14,7 +14,7 @@ class Station extends Model
     ];
 
     /**
- * Get the user that belong the phone.
+ * Get the user that belong
  */
     public function getCompanyName()
     {
@@ -33,5 +33,5 @@ class Station extends Model
 
     }
 
- 
+
 }
