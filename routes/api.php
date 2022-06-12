@@ -31,7 +31,6 @@ Route::delete('/posts/{post}', [PostController::class, 'destroy']);
 Route::get('/company', [CompanyController::class, 'index']);
 Route::get('/company/{company}/stations', [CompanyController::class, 'stations']);
 Route::get('/company/{company}/numberofcompanies', [CompanyController::class, 'numberofcompanies']);
-
 Route::post('/company', [CompanyController::class, 'store']);
 Route::patch('/company/{company}', [CompanyController::class, 'update']);
 Route::delete('/company/{company}', [CompanyController::class, 'destroy']);
