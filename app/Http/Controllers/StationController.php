@@ -8,7 +8,7 @@ class StationController extends Controller
 {
     public function index()
     {
-        return Station::with('users','company')->get();
+        return Station::with('users')->get();
     }
 
 }

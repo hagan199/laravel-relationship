@@ -13,11 +13,6 @@ class Product extends Model
         'product_name', 'station_id', 'detail'
     ];
 
-    public function company()
-    {
-        return $this->belongsTo(Company::class);
-    }
-
     public function station()
     {
         return $this->belongsTo(Station::class);

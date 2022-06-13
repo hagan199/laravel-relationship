@@ -18,4 +18,8 @@ class Company extends Model
         return $this->hasMany(Station::class);
     }
 
+    public function products()
+    {
+        return $this->hasManyThrough(Product::class, Station::class);
+    }
 }
