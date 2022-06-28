@@ -22,6 +22,12 @@ class CompanyController extends Controller
         return $products;
     }
 
+    public function countproductsbelongtocompany(Request $request, Company $company)
+    {
+        $products = Company::withCount('products')->get();
+        return $products;
+    }
+
     public function numberofcompanies(Request $request, Company $company){
         $count = Company::count();
         return $count;
