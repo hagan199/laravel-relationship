@@ -15,7 +15,11 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
+            $table->integer('imageable_id')->unsigned();
+            $table->string('imageable_type');
+            $table->string('filename');
             $table->timestamps();
+
         });
     }
 
@@ -27,5 +31,9 @@ class CreatePhotosTable extends Migration
     public function down()
     {
         Schema::dropIfExists('photos');
+        $table->id();
+        $table->integer('imageable_id')->unsigned();
+        $table->string('imageable_type');
+        $table->string('filename');
     }
 }
