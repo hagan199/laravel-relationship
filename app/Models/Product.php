@@ -12,9 +12,14 @@ class Product extends Model
     protected $fillable = [
         'product_name', 'station_id', 'detail'
     ];
-    
+
     public function station()
     {
         return $this->belongsTo(Station::class);
+    }
+
+    public function photos()
+    {
+        return $this->morphedByMany('App\Photo', 'imageable');
     }
 }
