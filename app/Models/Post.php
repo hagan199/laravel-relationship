@@ -12,4 +12,9 @@ class Post extends Model
     protected $fillable = [
         'title', 'content'
     ];
+
+    public function photos()
+    {
+        return $this->morphMany('App\Photo', 'imageable');
+    }
 }
