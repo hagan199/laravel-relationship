@@ -57,6 +57,7 @@ class CompanyController extends Controller
         return [
             'success' => $success
         ];
+
     }
 
     public function destroy(Company $company)

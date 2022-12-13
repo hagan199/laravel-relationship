@@ -16,8 +16,7 @@ class UserController extends Controller
         $validated = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
-            'password' => 'required|string',
-            'station_id' => 'required|numeric'
+            'password' => 'required|string'
         ]);
         $validated['password'] = bcrypt($validated['password']);
         return User::create($validated);

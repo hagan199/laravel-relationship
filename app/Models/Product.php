@@ -12,7 +12,7 @@ class Product extends Model
     protected $fillable = [
         'product_name', 'station_id', 'detail'
     ];
-
+    
     public function station()
     {
         return $this->belongsTo(Station::class);
