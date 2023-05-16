@@ -1,15 +1,36 @@
-# Laravel RESTful API
+Laravel RESTful API
+This is a simple example of how to create a RESTful API in Laravel 8.
 
-A simple example of how to create a RESTful API in Laravel 8.
+Endpoints
+Get all posts
+Retrieves all posts.
 
-## Endpoints
+URL: GET /api/posts
+Get a single post
+Retrieves a single post by its ID.
 
-Get all posts: `GET /api/posts`
+URL: GET /api/posts/{id}
+Parameters:
+id (integer): The ID of the post.
+Create a new post
+Creates a new post.
 
-Get a single post: `GET /api/posts/{id}`
+URL: POST /api/posts
+Request Body:
+title (string): The title of the post.
+content (string): The content of the post.
+Update a post
+Updates an existing post by its ID.
 
-Create a new post: `POST /api/posts`
+URL: PUT /api/posts/{id}
+Parameters:
+id (integer): The ID of the post.
+Request Body:
+title (string): The updated title of the post.
+content (string): The updated content of the post.
+Delete a post
+Deletes a post by its ID.
 
-Update a post: `PUT /api/posts/{id}`
-
-Delete a post: `DELETE /api/posts/{id}`
+URL: DELETE /api/posts/{id}
+Parameters:
+id (integer): The ID of the post.
