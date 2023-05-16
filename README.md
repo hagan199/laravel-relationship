@@ -1,4 +1,4 @@
-##Laravel RESTful API
+###  Laravel RESTful API
 This is a simple example of how to create a RESTful API in Laravel 8.
 
 Endpoints
